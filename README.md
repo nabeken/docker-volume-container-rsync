@@ -37,3 +37,10 @@ You can override via an environment variable like this:
 ```sh
 $ docker run -d -p 10873:873 -e ALLOW='10.0.0.0/8 x.x.x.x/y' nabeken/docker-volume-container-rsync
 ```
+
+Also, rsync server exposes the volume under `/docker` in default.
+You can override a path via an environment variable like this:
+
+```sh
+$ docker run -d -p 10873:873 -e VOLUME='/var/jenkins_home' -v /var/jenkins_home nabeken/docker-volume-container-rsync
+```
