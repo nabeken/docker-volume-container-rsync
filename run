@@ -2,7 +2,7 @@
 VOLUME=/docker
 ALLOW=${ALLOW:-192.168.0.0/16 172.16.0.0/12}
 OWNER=${OWNER:-nobody}
-GROUP=${OWNER:-nogroup}
+GROUP=${GROUP:-nogroup}
 
 chown "${OWNER}:${GROUP}" "${VOLUME}"
 
