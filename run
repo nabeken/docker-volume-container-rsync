@@ -7,8 +7,8 @@ GROUP=${GROUP:-nogroup}
 chown "${OWNER}:${GROUP}" "${VOLUME}"
 
 [ -f /etc/rsyncd.conf ] || cat <<EOF > /etc/rsyncd.conf
-uid = nobody
-gid = nogroup
+uid = ${OWNER}
+gid = ${GROUP}
 use chroot = yes
 pid file = /var/run/rsyncd.pid
 log file = /dev/stdout
