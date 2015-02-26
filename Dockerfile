@@ -1,8 +1,8 @@
-FROM ubuntu:trusty
+FROM debian:7.8
 MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
 RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -yq rsync && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends rsync && \
   apt-get clean autoclean && \
   apt-get autoremove -y && \
   rm -rf /var/lib/{apt,dpkg,cache,log}/
