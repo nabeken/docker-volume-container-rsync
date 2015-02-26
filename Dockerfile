@@ -1,4 +1,4 @@
-FROM debian:7.8
+FROM debian:wheezy
 MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
 RUN apt-get update && \
