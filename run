@@ -3,6 +3,7 @@ VOLUME=${VOLUME:-/docker}
 ALLOW=${ALLOW:-192.168.0.0/16 172.16.0.0/12}
 OWNER=${OWNER:-nobody}
 GROUP=${GROUP:-nogroup}
+PIDFILE=${PIDFILE:-/var/run/rsyncd.pid}
 
 chown "${OWNER}:${GROUP}" "${VOLUME}"
 
@@ -10,7 +11,7 @@ chown "${OWNER}:${GROUP}" "${VOLUME}"
 uid = ${OWNER}
 gid = ${GROUP}
 use chroot = yes
-pid file = /var/run/rsyncd.pid
+pid file = ${PIDFILE}
 log file = /dev/stdout
 reverse lookup = no
 
@@ -22,4 +23,5 @@ reverse lookup = no
     comment = docker volume
 EOF
 
+[ -f ${PIDFILE} ] && rm -f ${PIDFILE}
 exec /usr/bin/rsync --no-detach --daemon --config /etc/rsyncd.conf "$@"
