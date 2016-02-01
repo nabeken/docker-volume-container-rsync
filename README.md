@@ -31,7 +31,7 @@ docker run -it --volumes-from $CID ubuntu /bin/sh
 
 ## Advanced
 
-In default, rsync server accepts a connection only from `192.168.0.0/16` and `172.12.0.0/12` for security reasons.
+In default, rsync server accepts a connection only from `192.168.0.0/16` and `172.16.0.0/12` for security reasons.
 You can override via an environment variable like this:
 
 ```sh
