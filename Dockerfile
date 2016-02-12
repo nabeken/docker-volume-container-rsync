@@ -1,7 +1,11 @@
-FROM alpine:3.3
+FROM debian:jessie
 MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
-RUN apk add --no-cache --update rsync && rm -f /etc/rsyncd.conf
+RUN apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends rsync && \
+  apt-get clean autoclean && \
+  apt-get autoremove -y && \
+  rm -rf /var/lib/apt/lists/*
 
 EXPOSE 873
 VOLUME /docker
