@@ -9,7 +9,7 @@ chown "${OWNER}:${GROUP}" "${VOLUME}"
 [ -f /etc/rsyncd.conf ] || cat <<EOF > /etc/rsyncd.conf
 uid = ${OWNER}
 gid = ${GROUP}
-use chroot = yes
+use chroot = no
 log file = /dev/stdout
 reverse lookup = no
 
