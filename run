@@ -4,7 +4,7 @@ ALLOW=${ALLOW:-192.168.0.0/16 172.16.0.0/12}
 OWNER=${OWNER:-nobody}
 GROUP=${GROUP:-nogroup}
 
-chown "${OWNER}:${GROUP}" "${VOLUME}"
+chown -R "${OWNER}:${GROUP}" "${VOLUME}"
 
 [ -f /etc/rsyncd.conf ] || cat <<EOF > /etc/rsyncd.conf
 uid = ${OWNER}
