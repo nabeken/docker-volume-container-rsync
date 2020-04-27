@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:10
 MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
 RUN apt-get update && \
