@@ -2,7 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+      - update-with-multiarch
 
 env:
   IMAGE_NAME: docker-volume-container-rsync
