@@ -1,10 +1,11 @@
 FROM debian:11
 MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
-RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends rsync && \
-  apt-get clean autoclean && \
-  apt-get autoremove -y && \
+SHELL ["/bin/bash" , "-c"]
+
+RUN set -euxo pipefail; \
+  apt-get update; \
+  apt-get install -y --no-install-recommends rsync; \
   rm -rf /var/lib/apt/lists/*
 
 EXPOSE 873
