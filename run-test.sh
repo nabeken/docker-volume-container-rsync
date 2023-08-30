@@ -14,6 +14,8 @@ echo "Running the tests..."
 
 docker compose -f compose-test.yaml up -d || die "unable to launch"
 
+sleep 3
+
 rsync "${RSYNC_HOST}"/volume/ > /dev/null || die "unable to connect"
 
 T1=$(mktemp)
