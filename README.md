@@ -1,4 +1,5 @@
 # docker-volume-container-rsync
+[![Docker Image CI](https://github.com/nabeken/docker-volume-container-rsync/actions/workflows/docker-image.yml/badge.svg)](https://github.com/nabeken/docker-volume-container-rsync/actions/workflows/docker-image.yml)
 
 `docker-volume-container-rsync` is to provide RSYNC access to a mounted volume. You can synchronize your local file over RSYNC into a container volume very fast.
 
