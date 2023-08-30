@@ -1,6 +1,6 @@
 services:
   rsync:
-    image: ghcr.io/nabeken/docker-volume-container-rsync:local-test
+    image: ghcr.io/nabeken/docker-volume-container-rsync:action-local-test
     volumes:
       - vol:/volume
     ports:
