@@ -12,5 +12,14 @@
     "docker:pinDigests"
   ],
 
-  "packageRules": []
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["digest"],
+      "matchManagers": ["dockerfile"],
+      "matchPackagePatterns": [
+        "^debian$"
+      ],
+      "automerge": true
+    }
+  ]
 }
