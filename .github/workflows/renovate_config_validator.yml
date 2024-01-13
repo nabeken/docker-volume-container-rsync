@@ -16,4 +16,4 @@ jobs:
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
       - name: Validate the config
-        uses: suzuki-shunsuke/github-action-renovate-config-validator@7657f9865bd2d5fba0cc0fc12cb692e42fbde1e2 # v1.0.0
+        uses: suzuki-shunsuke/github-action-renovate-config-validator@b54483862375f51910a60c4f498e927d4f3df466 # v1.0.1
