@@ -19,7 +19,7 @@ jobs:
     - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
     - name: Docker meta
-      uses: docker/metadata-action@dbef88086f6cef02e264edb7dbf63250c17cef6c # v5
+      uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5
       id: meta
       with:
         # list of Docker images to use as base name for tags
