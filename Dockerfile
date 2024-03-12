@@ -1,4 +1,4 @@
-FROM debian:12@sha256:7872eb2c9c41a577f972a9ade8f05d35fe11ab1842b6c0e2de1e9b206cd80d47
+FROM debian:12@sha256:e97ee92bf1e11a2de654e9f3da827d8dce32b54e0490ac83bfc65c8706568116
 MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
 SHELL ["/bin/bash" , "-c"]
