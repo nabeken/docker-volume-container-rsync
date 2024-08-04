@@ -16,8 +16,8 @@
     {
       "matchUpdateTypes": ["digest"],
       "matchManagers": ["dockerfile"],
-      "matchPackagePatterns": [
-        "^debian$"
+      "matchPackageNames": [
+        "/^debian$/"
       ],
       "automerge": true
     }
