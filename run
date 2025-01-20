@@ -10,8 +10,8 @@ chown "${OWNER}:${GROUP}" "${VOLUME}"
 uid = ${OWNER}
 gid = ${GROUP}
 use chroot = yes
-pid file = /var/run/rsyncd.pid
 log file = /dev/stdout
+reverse lookup = no
 
 [volume]
     hosts deny = *

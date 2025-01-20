@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+
+  "extends": [
+    "github>nabeken/renovate-config-oss",
+    "github>nabeken/renovate-config-oss:recommended",
+    "github>nabeken/renovate-config-oss:groupGoVersionUpgrade",
+    "github>nabeken/renovate-config-oss:githubLocalActionsDefaultVersions",
+    "github>nabeken/renovate-config-oss:groupGithubActions",
+
+    "docker:enableMajor",
+    "docker:pinDigests"
+  ],
+
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["digest"],
+      "matchManagers": ["dockerfile"],
+      "matchPackageNames": [
+        "/^debian$/"
+      ],
+      "automerge": true
+    }
+  ]
+}
