@@ -14,7 +14,7 @@
 
   "packageRules": [
     {
-      "matchUpdateTypes": ["digest"],
+      "matchUpdateTypes": ["digest", "patch"],
       "matchManagers": ["dockerfile"],
       "matchPackageNames": [
         "/^debian$/"
