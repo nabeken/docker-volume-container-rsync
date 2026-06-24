@@ -1,4 +1,4 @@
-FROM debian:trixie-20260623@sha256:e95d0a959e322983d2c7a9e970a9727bd0dec842bde2e2052568715e2357a508
+FROM debian:trixie-20260623@sha256:d07d1b51c39f51188e60be9b64e6bf769fa94e187f092bc32b91305cfa34ba5a
 MAINTAINER TANABE Ken-ichi <nabeken@tknetworks.org>
 
 SHELL ["/bin/bash" , "-c"]
